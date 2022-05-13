@@ -1,24 +1,7 @@
-# README
+# Рельсовый Гамбит (Rails Gambit)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+`Rails Gambit` - это образовательный проект по реализации онлайн платформы для совместной игры в шахматы и не только. Он создан с целью изучения `Ruby on Rails` и применения передовых подходов в современной web-разработке.
 
-Things you may want to cover:
+## Присоединиться к разработке
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+В [contributing.md](CONTRIBUTING.md) собраны парвила и рекомендации для текущих и новых разработчиков. Ждём и тебя тоже!.
