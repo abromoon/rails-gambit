@@ -82,7 +82,7 @@ tagging:branches:
     - /^doc.*$/
     - tags
 
-tagging:master:
+tagging:main:
   extends: .tagging
   variables:
     TAG: latest
@@ -90,6 +90,7 @@ tagging:master:
     name: image/latest
   only:
     - master
+    - main
 
 # DEPLOY STAGE
 
@@ -101,4 +102,5 @@ badges:
     - echo release badges script
   only:
     - master
+    - main
 
