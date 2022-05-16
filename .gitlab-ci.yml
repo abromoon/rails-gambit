@@ -1,0 +1,106 @@
+variables:
+  SERVICE_NAME: rails-gambit
+  SERVICE_IMAGE: registry.gitlab.com/r4060/rails-gambit
+  SERVICE_TAG: ${CI_COMMIT_SHORT_SHA}
+
+stages:
+  - build
+  - tests
+  - tagging
+  - deploy
+
+# MIXINS
+
+.runner-image:
+  image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/ruby:alpine3.15
+
+##### STAGES #####
+
+# BUILD STAGE
+
+build:image:
+  extends: .runner-image
+  stage: build
+  script:
+    - echo this is template for build script
+  except:
+    - tags # tags используются для перетегирования образов, а не для сборки
+
+# TESTS STAGE
+
+.test_job:
+  extends: .runner-image
+  stage: tests
+  variables:
+    RAILS_ENV: test
+    COMPOSE_FILE: envs/tests/docker-compose.yml
+
+tests:units:
+  extends: .test_job
+  variables:
+    TEST_TYPE: units
+  script:
+    - echo this is template for unit tests
+  coverage: '/\(\d+.\d+\%\) covered/'
+  artifacts:
+    reports:
+      junit: junits/rspec*.xml
+    name: "coverage"
+    paths:
+      - coverage/*
+      - junits/*
+
+# TAGGING STAGE
+
+.tagging:
+  extends: .runner-image
+  stage: tagging
+  script:
+    - echo this is template for tagging
+
+tagging:tags:
+  extends: .tagging
+  variables:
+    TAG: ${CI_COMMIT_TAG}
+  environment:
+    name: image/${CI_COMMIT_TAG}
+  only:
+    - tags
+  except:
+    - branches
+
+tagging:branches:
+  extends: .tagging
+  variables:
+    TAG: ${CI_COMMIT_REF_SLUG}
+  environment:
+    name: image/${CI_COMMIT_REF_SLUG}
+  except:
+    - /^feature.*$/
+    - /^fix.*$/
+    - /^hotfix.*$/
+    - /^doc.*$/
+    - tags
+
+tagging:main:
+  extends: .tagging
+  variables:
+    TAG: latest
+  environment:
+    name: image/latest
+  only:
+    - master
+    - main
+
+# DEPLOY STAGE
+
+badges:
+  extends: .runner-image
+  stage: deploy
+  allow_failure: true
+  script:
+    - echo release badges script
+  only:
+    - master
+    - main
+
