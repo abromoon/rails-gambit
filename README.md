@@ -41,3 +41,10 @@
 ## Присоединиться к разработке
 
 В [contributing.md](CONTRIBUTING.md) собраны правила и рекомендации для текущих и новых разработчиков. Ждём и тебя тоже!.
+
+<div align="center" width="100px">
+
+[![rnds](./RNDSOFT.png)](https://github.com/RND-SOFT/)
+[![sfu](./SFU.png)](https://sfedu.ru/) 
+
+</div>
