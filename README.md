@@ -1,24 +1,11 @@
-# README
+# Рельсовый Гамбит (Rails Gambit)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![pipeline status](https://gitlab.com/r4060/rails-gambit/badges/main/pipeline.svg)](https://gitlab.com/r4060/rails-gambit/)
+[![coverage report](https://gitlab.com/r4060/rails-gambit/badges/main/coverage.svg)](https://gitlab.com/r4060/rails-gambit/)
+[![gitlab](https://badgen.net/badge/github/mirror/orange?icon=gitlab)](https://gitlab.com/r4060/rails-gambit)
 
-Things you may want to cover:
+`Rails Gambit` - это образовательный проект по реализации онлайн платформы для совместной игры в шахматы и не только. Он создан с целью изучения `Ruby on Rails` и применения передовых подходов в современной web-разработке.
 
-* Ruby version
+## Присоединиться к разработке
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+В [contributing.md](CONTRIBUTING.md) собраны парвила и рекомендации для текущих и новых разработчиков. Ждём и тебя тоже!.
