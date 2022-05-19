@@ -1,0 +1,9 @@
+--color
+--tty
+--format documentation
+--format RspecJunitFormatter
+--out junits/rspec<%= ENV['TEST_TYPE'] %><%= ENV['TEST_ENV_NUMBER'] %>.xml
+--format ParallelTests::RSpec::SummaryLogger --out tmp/spec_summary.log
+--format ParallelTests::RSpec::FailuresLogger --out tmp/failing_specs.log
+--require spec_helper
+--require rails_helper

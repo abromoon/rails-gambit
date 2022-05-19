@@ -33,14 +33,34 @@ build:image:
   stage: tests
   variables:
     RAILS_ENV: test
-    COMPOSE_FILE: envs/tests/docker-compose.yml
-
+  cache:
+    #key: gems_and_packages
+    paths:
+      - vendor/ruby
+      - vendor/apk
+      
+      
 tests:units:
   extends: .test_job
+  services:
+    - name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/postgres:12
+      alias: postgres
   variables:
     TEST_TYPE: units
+    POSTGRES_HOST_AUTH_METHOD: trust
+    DATABASE_URL: 'postgresql://postgres@postgres/rails_gambit_test'
   script:
-    - echo this is template for unit tests
+    - mkdir -p vendor/apk
+    - rm -rf /var/cache/apk
+    - ln -s ${PWD}/vendor/apk /var/cache/apk
+    - ln -s ${PWD}/vendor/apk /etc/apk/cache
+    - apk add build-base tzdata postgresql-dev postgresql-client
+    - bundle config set --local path 'vendor'
+    - bundle install
+    - rake db:create
+    - rake db:migrate
+    - rake db:seed
+    - bundle exec rspec
   coverage: '/\(\d+.\d+\%\) covered/'
   artifacts:
     reports:
