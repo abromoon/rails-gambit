@@ -4,8 +4,20 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# Ignore bundler config.
+# файл .env используется ЛОКАЛЬНЫМ docker-compose
+/.env
+/junits
+
+config/database.yml
+config/secrets.yml
+config/cable.yml
+
+
+# bundler state
 /.bundle
+/vendor/bundle/
+/vendor/ruby/
+vendor/cache
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -29,3 +41,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+
+/coverage/
