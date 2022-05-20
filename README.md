@@ -106,9 +106,8 @@ COVERAGE:  11.54% -- 3/26 lines in 8 files
 
 В [contributing.md](CONTRIBUTING.md) собраны правила и рекомендации для текущих и новых разработчиков. Ждём и тебя тоже!.
 
-<div align="center" width="100px">
+<div align="center">
 
-[![rnds](./RNDSOFT.png)](https://github.com/RND-SOFT/)
-[![sfu](./SFU.png)](https://sfedu.ru/)
+[<img src="./RNDSOFTSFU.png" alt="rndsoftsfu" height="130px"/>](https://github.com/RND-SOFT/)
 
 </div>
