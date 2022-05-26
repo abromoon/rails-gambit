@@ -70,6 +70,22 @@ tests:units:
       - coverage/*
       - junits/*
 
+tests:ports:
+  extends: .test_job
+  variables:
+    SCAN_TARGET: gambit.edu.rnds.pro
+    ALLOWED_PORTS: 2
+  script:
+    - mkdir -p vendor/apk
+    - rm -rf /var/cache/apk
+    - ln -s ${PWD}/vendor/apk /var/cache/apk
+    - ln -s ${PWD}/vendor/apk /etc/apk/cache
+    - apk add curl nmap
+    - ./scripts/scanports.sh
+  only:
+    - master
+    - main
+
 # TAGGING STAGE
 
 .tagging:
