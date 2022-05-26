@@ -74,7 +74,7 @@ tests:ports:
   extends: .test_job
   variables:
     SCAN_TARGET: gambit.edu.rnds.pro
-    ALLOWED_PORTS: 2
+    ALLOWED_PORTS: 3
   script:
     - mkdir -p vendor/apk
     - rm -rf /var/cache/apk
