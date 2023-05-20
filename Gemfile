@@ -8,7 +8,8 @@ gem "rails", "~> 7.0.3"
 gem "puma", "~> 5.0"
 
 # Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
+# gem "pg", "~> 1.1"
+gem "pg"  # for Windows
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
@@ -85,4 +86,9 @@ end
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+# gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem 'tzinfo-data'
+gem 'tzinfo'
+
+gem 'devise'
+gem 'simple_form'
