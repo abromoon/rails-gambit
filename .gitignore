@@ -44,3 +44,4 @@ vendor/cache
 
 
 /coverage/
+/node_modules
