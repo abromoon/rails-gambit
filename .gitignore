@@ -45,3 +45,4 @@ vendor/cache
 
 /coverage/
 /node_modules
+/app/assets/builds/*
