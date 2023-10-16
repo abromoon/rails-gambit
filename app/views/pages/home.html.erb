@@ -1,0 +1,12 @@
+<div class="d-flex align-items-center mb-4 mt-4">
+  <img class="logo_rdns" src="https://avatars.githubusercontent.com/u/14114445?s=200&v=4" alt="Logo">
+  <h1 class="m-4">Rails Gambit</h1>
+</div>
+<% if current_user %>
+  <h3><%= current_user.email %></h3>
+  <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
+  <%= render partial: "layouts/players" %>
+<% else %>
+  <%= link_to "Login", new_user_session_path, class: "btn btn-primary" %>
+  <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success" %>
+<% end %>

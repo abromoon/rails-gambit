@@ -1,0 +1,18 @@
+$btn-padding-x-xs: 0.25rem;
+$btn-padding-y-xs: 0.25rem;
+
+$table-cell-padding-y: 0.3rem;
+
+$nav-tabs-border-width: 0px;
+$nav-tabs-link-active-border-color: var(--primary);
+
+$enable-negative-margins: true;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 880px,
+  md: 1150px,
+  lg: 1450px,
+  xl: 1920px,
+  xxl: 2500px,
+);

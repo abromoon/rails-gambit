@@ -1,0 +1,4 @@
+web: bundle exec puma -t 1:5 -w 2 -p ${PORT}
+js: yarn build --watch
+css: yarn watch:css
+routes: yarn watch:jsroutes

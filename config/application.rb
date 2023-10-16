@@ -50,4 +50,3 @@ module RailsGambit
   end
 end
 
-Rails.application.eager_load!
