@@ -63,7 +63,6 @@ tests:units:
     - rake db:create
     - rake db:migrate
     - rake db:seed
-    - bundle exec rails assets:precompile
     - bundle exec rspec
   coverage: '/\(\d+.\d+\%\) covered/'
   artifacts:
