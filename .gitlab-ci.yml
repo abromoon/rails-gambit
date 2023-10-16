@@ -49,6 +49,7 @@ tests:units:
     TEST_TYPE: units
     POSTGRES_HOST_AUTH_METHOD: trust
     DATABASE_URL: 'postgresql://postgres@postgres/rails_gambit_test'
+    DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL: 'true'
   script:
     - mkdir -p vendor/apk
     - rm -rf /var/cache/apk
