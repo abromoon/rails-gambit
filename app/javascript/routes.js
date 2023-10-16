@@ -545,6 +545,15 @@
 
   /**
    * Generates rails route to
+   * /users/:id/edit(.:format)
+   * @param {any} id
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  edit_user_path: __jsr.r({"id":{"r":true},"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[3,"id"],[2,[7,"/"],[2,[6,"edit"],[1,[2,[8,"."],[3,"format"]]]]]]]]]),
+
+  /**
+   * Generates rails route to
    * /users/password/edit(.:format)
    * @param {object | undefined} options
    * @returns {string} route path
@@ -599,6 +608,14 @@
    * @returns {string} route path
    */
   new_rails_conductor_inbound_email_source_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"rails"],[2,[7,"/"],[2,[6,"conductor"],[2,[7,"/"],[2,[6,"action_mailbox"],[2,[7,"/"],[2,[6,"inbound_emails"],[2,[7,"/"],[2,[6,"sources"],[2,[7,"/"],[2,[6,"new"],[1,[2,[8,"."],[3,"format"]]]]]]]]]]]]]]]),
+
+  /**
+   * Generates rails route to
+   * /users/new(.:format)
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  new_user_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[6,"new"],[1,[2,[8,"."],[3,"format"]]]]]]]),
 
   /**
    * Generates rails route to
@@ -850,6 +867,15 @@
 
   /**
    * Generates rails route to
+   * /users/:id(.:format)
+   * @param {any} id
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  user_path: __jsr.r({"id":{"r":true},"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[3,"id"],[1,[2,[8,"."],[3,"format"]]]]]]]),
+
+  /**
+   * Generates rails route to
    * /users/auth/google_oauth2(.:format)
    * @param {object | undefined} options
    * @returns {string} route path
@@ -886,7 +912,15 @@
    * @param {object | undefined} options
    * @returns {string} route path
    */
-  user_session_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[6,"sign_in"],[1,[2,[8,"."],[3,"format"]]]]]]])}
+  user_session_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[6,"sign_in"],[1,[2,[8,"."],[3,"format"]]]]]]]),
+
+  /**
+   * Generates rails route to
+   * /users(.:format)
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  users_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"users"],[1,[2,[8,"."],[3,"format"]]]]])}
 ,
     };
     Utils.define_module("CJS", result);
