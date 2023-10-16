@@ -57,6 +57,8 @@ tests:units:
     - apk add build-base tzdata postgresql-dev postgresql-client
     - bundle config set --local path 'vendor'
     - bundle install
+    - cp config/database.yml.example config/database.yml
+    - cp config/storage.yml.example config/storage.yml
     - rake db:create
     - rake db:migrate
     - rake db:seed
