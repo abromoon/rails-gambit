@@ -1,0 +1,17 @@
+html
+  head
+    title Rails Gambit
+
+    = csrf_meta_tags
+    = csp_meta_tag
+    = favicon_link_tag asset_path('favicon.png')
+
+    meta name="turbo-cache-control" content="no-cache"
+    meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbo-track': 'reload'
+
+  body.p-0.bg-light
+    .container 
+      = yield 

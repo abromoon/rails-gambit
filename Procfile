@@ -1,3 +1,1 @@
-web: rails s
-js: yarn build --watch
-css: yarn build:css --watch
+web: bundle exec puma -t 1:5 -w 2 -p ${PORT}
