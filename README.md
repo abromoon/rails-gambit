@@ -53,6 +53,7 @@
 
 - [Getting Started with Rails][] — официальный гайд от разработчиков Ruby on Rails. Пошаговое создание простенького блога со статьями и комментариями. Есть [русская версия][] от комьюнити, но там может быть устаревшая версия гайда.
 - [Ruby on Rails 6/7: уроки][] — плейлист с хорошими уроками по Ruby on Rails на русском языке.
+- [Turbo Rails Tutorial][] — гайд по Hotwire, которые используются для обновления данных на странице без её перезагрузки.
 
 ## Запуск (Install)
 
@@ -136,5 +137,6 @@ COVERAGE:  11.54% -- 3/26 lines in 8 files
 [Getting Started with Rails]: https://guides.rubyonrails.org/getting_started.html
 [русская версия]: https://rusrails.ru/getting-started
 [Ruby on Rails 6/7: уроки]: https://youtube.com/playlist?list=PLWlFXymvoaJ_IY53-NQKwLCkR-KkZ_44-&feature=shared
+[Turbo Rails Tutorial]: https://www.hotrails.dev/turbo-rails
 
 [CONTRIBUTING.md]: CONTRIBUTING.md
