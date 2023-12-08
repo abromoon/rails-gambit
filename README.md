@@ -89,7 +89,7 @@ rails s
 
 ## Тестирование (Running Tests)
 
-В качестве фреймворка тестирования используется [RSpec](https://rspec.info/) и в частности [RSpec-Rails](https://github.com/rspec/rspec-rails). Для запуска юнит-тестов достаточно выполнить команду:
+В качестве фреймворка тестирования используется [RSpec][], в частности [rspec-rails][]. Для запуска тестов достаточно выполнить команду:
 
 ```shell
 rspec
@@ -97,11 +97,13 @@ rspec
 
 ### Результаты теcтирования (Tests Results)
 
-Результаты тестирование в формате `JUnit` появятся в файле `junits/rspec.xml`
+Результаты тестирования в формате `JUnit` появятся в файле `junits/rspec.xml`.
 
 ### Покрытие кода (Code Coverage)
 
-Для рассчёта [покрытия код](https://ru.wikipedia.org/wiki/Покрытие_кода) используется библиотека [simplecov](https://github.com/simplecov-ruby/simplecov) и его результаты выводятся в двух форматах: в виде статического html-сайта в папке `coverage/tests/index.html` и в текущем терминале в текстовом виде:
+Для рассчёта [покрытия кода][] используется библиотека [SimpleCov][]. Результаты выводятся в двух форматах: в виде статического HTML сайта в папке `coverage/tests/index.html` и в терминале.
+
+Пример вывода в терминал:
 
 ```shell
 Run options: exclude {:capybara=>true}
@@ -138,5 +140,10 @@ COVERAGE:  11.54% -- 3/26 lines in 8 files
 [русская версия]: https://rusrails.ru/getting-started
 [Ruby on Rails 6/7: уроки]: https://youtube.com/playlist?list=PLWlFXymvoaJ_IY53-NQKwLCkR-KkZ_44-&feature=shared
 [Turbo Rails Tutorial]: https://www.hotrails.dev/turbo-rails
+
+[RSpec]: https://rspec.info/
+[rspec-rails]: https://github.com/rspec/rspec-rails
+[покрытия кода]: https://ru.wikipedia.org/wiki/Покрытие_кода
+[SimpleCov]: https://github.com/simplecov-ruby/simplecov
 
 [CONTRIBUTING.md]: CONTRIBUTING.md
