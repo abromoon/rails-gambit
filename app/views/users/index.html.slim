@@ -1,0 +1,17 @@
+.d-flex.align-items-center.mb-4.mt-4
+  img.logo-rnds[src="https://avatars.githubusercontent.com/u/14114445?s=200&v=4" 
+                alt="Logo" 
+                width="64px"]
+  h1.m-4
+    | Rails Gambit
+
+- if user_signed_in?
+  h3
+    = current_user.email
+    = button_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-danger"
+    = render partial: "players"
+
+- else
+  = link_to "Login", new_user_session_path, class: "btn btn-primary me-2"
+  = link_to "Sign Up", new_user_registration_path, class: "btn btn-success"
+

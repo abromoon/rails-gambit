@@ -1,0 +1,6 @@
+div id="#{dom_id(game)}"
+  div.row
+    div.col-8
+      = render partial: "board", locals: { game: game }
+    div.col-4
+      = render partial: "pgn", locals: { game: game }
