@@ -1,0 +1,11 @@
+{
+    "editor.tabSize": 2,
+    "[git-commit]": {
+        "editor.rulers": [50]
+    },
+    "[ruby]": {
+        "editor.rulers": [
+            120
+        ]
+    }
+}
