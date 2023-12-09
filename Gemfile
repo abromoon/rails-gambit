@@ -4,7 +4,6 @@ git_source(:github) {|repo| "https://github.com/#{repo}.git" }
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.7', '>= 7.0.7.2'
 
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 6.3.1'
 
@@ -56,9 +55,9 @@ group :development, :test do
 end
 
 group :development do
+  gem 'ruby-lsp-rails'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
-
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 end
