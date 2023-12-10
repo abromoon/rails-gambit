@@ -54,12 +54,16 @@ group :development, :test do
   gem 'awesome_print', '~> 1.8'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rubocop'
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
 end
 
 group :development do
   gem 'ruby-lsp-rails'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 end
@@ -71,7 +75,6 @@ group :test do
 
   gem 'database_cleaner'
   gem 'parallel_tests'
-  gem 'rubocop'
   # gem 'pronto'
   # gem 'pronto-goodcheck', require: false
   # gem 'pronto-rubocop', require: false
