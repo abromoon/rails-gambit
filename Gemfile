@@ -51,6 +51,7 @@ gem 'js-routes', '~> 2.2.7'
 gem 'kaminari', '~> 1.2.2'
 
 group :development, :test do
+  gem 'awesome_print', '~> 1.8'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
