@@ -1,0 +1,8 @@
+en:
+  users:
+    index:
+      logout: Logout
+      sign_up: Sign Up
+      login: Login
+    players:
+      continue: "Continue # %{game_id} game"

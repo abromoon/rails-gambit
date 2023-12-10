@@ -1,0 +1,17 @@
+ru:
+  devise:
+    registrations:
+      new:
+        title: Регистрация
+        password_hint: Минимум %{minimum_password_length} символов
+    sessions:
+      new:
+        title: Вход
+    passwords:
+      new:
+        title: Восстановление пароля
+    shared:
+      links:
+        have_account: "Уже зарегистрированы? "
+        dont_have_account: "Ещё нет аккаунта? "
+        forgot_password: "Забыли пароль? "

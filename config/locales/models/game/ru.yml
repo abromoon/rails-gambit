@@ -1,0 +1,13 @@
+ru:
+  activerecord:
+    models:
+      game: Партия
+    attributes:
+      game:
+        state: Фаза
+        turn: Ход 
+        fen: Нотация Форсайта — Эдвардса
+        pgn: Portable Game Notation
+        white_player_id: Играет белыми
+        black_player_id: Играет черными
+

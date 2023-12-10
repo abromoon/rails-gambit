@@ -1,0 +1,17 @@
+en:
+  devise:
+    registrations:
+      new:
+        title: Registration
+        password_hint: "%{minimum_password_length} characters minimum"
+    sessions:
+      new:
+        title: Login
+    passwords:
+      new:
+        title: Reset password
+    shared:
+      links:
+        have_account: "Already have an account? "
+        dont_have_account: "Don't have an account yet? "
+        forgot_password: "Forgot your password? "
