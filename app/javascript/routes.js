@@ -916,6 +916,38 @@
 
   /**
    * Generates rails route to
+   * /users/auth/vkontakte(.:format)
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  user_vkontakte_omniauth_authorize_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[6,"auth"],[2,[7,"/"],[2,[6,"vkontakte"],[1,[2,[8,"."],[3,"format"]]]]]]]]]),
+
+  /**
+   * Generates rails route to
+   * /users/auth/vkontakte/callback(.:format)
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  user_vkontakte_omniauth_callback_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[6,"auth"],[2,[7,"/"],[2,[6,"vkontakte"],[2,[7,"/"],[2,[6,"callback"],[1,[2,[8,"."],[3,"format"]]]]]]]]]]]),
+
+  /**
+   * Generates rails route to
+   * /users/auth/yandex(.:format)
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  user_yandex_omniauth_authorize_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[6,"auth"],[2,[7,"/"],[2,[6,"yandex"],[1,[2,[8,"."],[3,"format"]]]]]]]]]),
+
+  /**
+   * Generates rails route to
+   * /users/auth/yandex/callback(.:format)
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  user_yandex_omniauth_callback_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[6,"auth"],[2,[7,"/"],[2,[6,"yandex"],[2,[7,"/"],[2,[6,"callback"],[1,[2,[8,"."],[3,"format"]]]]]]]]]]]),
+
+  /**
+   * Generates rails route to
    * /users(.:format)
    * @param {object | undefined} options
    * @returns {string} route path
