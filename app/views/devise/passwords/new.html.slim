@@ -2,7 +2,7 @@
   = f.error_notification
 
   h3.fw-normal.mb-3.pb-3[style="letter-spacing: 1px;"]
-    | Forgot your password?
+    = t('.title')
   
   .form-inputs
     = f.input :email,
@@ -11,6 +11,6 @@
               input_html: { autocomplete: "email" }
 
   .form-actions.pt-1.mb-4
-    = f.button :submit, "Send me reset password instructions", class: "btn btn-info btn-lg btn-block"
+    = f.button :submit, t('buttons.reset_password'), class: "btn btn-info btn-lg btn-block"
     
 = render "devise/shared/links"

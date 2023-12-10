@@ -503,11 +503,11 @@
         ...{
   /**
    * Generates rails route to
-   * /about(.:format)
+   * (/:locale)/about(.:format)
    * @param {object | undefined} options
    * @returns {string} route path
    */
-  about_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"about"],[1,[2,[8,"."],[3,"format"]]]]]),
+  about_path: __jsr.r({"locale":{},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"about"],[1,[2,[8,"."],[3,"format"]]]]]]),
 
   /**
    * Generates rails route to
@@ -527,12 +527,12 @@
 
   /**
    * Generates rails route to
-   * /games/:id/edit(.:format)
+   * (/:locale)/games/:id/edit(.:format)
    * @param {any} id
    * @param {object | undefined} options
    * @returns {string} route path
    */
-  edit_game_path: __jsr.r({"id":{"r":true},"format":{}}, [2,[7,"/"],[2,[6,"games"],[2,[7,"/"],[2,[3,"id"],[2,[7,"/"],[2,[6,"edit"],[1,[2,[8,"."],[3,"format"]]]]]]]]]),
+  edit_game_path: __jsr.r({"locale":{},"id":{"r":true},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"games"],[2,[7,"/"],[2,[3,"id"],[2,[7,"/"],[2,[6,"edit"],[1,[2,[8,"."],[3,"format"]]]]]]]]]]),
 
   /**
    * Generates rails route to
@@ -545,12 +545,12 @@
 
   /**
    * Generates rails route to
-   * /users/:id/edit(.:format)
+   * (/:locale)/users/:id/edit(.:format)
    * @param {any} id
    * @param {object | undefined} options
    * @returns {string} route path
    */
-  edit_user_path: __jsr.r({"id":{"r":true},"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[3,"id"],[2,[7,"/"],[2,[6,"edit"],[1,[2,[8,"."],[3,"format"]]]]]]]]]),
+  edit_user_path: __jsr.r({"locale":{},"id":{"r":true},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[3,"id"],[2,[7,"/"],[2,[6,"edit"],[1,[2,[8,"."],[3,"format"]]]]]]]]]]),
 
   /**
    * Generates rails route to
@@ -570,28 +570,28 @@
 
   /**
    * Generates rails route to
-   * /games/:id(.:format)
+   * (/:locale)/games/:id(.:format)
    * @param {any} id
    * @param {object | undefined} options
    * @returns {string} route path
    */
-  game_path: __jsr.r({"id":{"r":true},"format":{}}, [2,[7,"/"],[2,[6,"games"],[2,[7,"/"],[2,[3,"id"],[1,[2,[8,"."],[3,"format"]]]]]]]),
+  game_path: __jsr.r({"locale":{},"id":{"r":true},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"games"],[2,[7,"/"],[2,[3,"id"],[1,[2,[8,"."],[3,"format"]]]]]]]]),
 
   /**
    * Generates rails route to
-   * /games(.:format)
+   * (/:locale)/games(.:format)
    * @param {object | undefined} options
    * @returns {string} route path
    */
-  games_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"games"],[1,[2,[8,"."],[3,"format"]]]]]),
+  games_path: __jsr.r({"locale":{},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"games"],[1,[2,[8,"."],[3,"format"]]]]]]),
 
   /**
    * Generates rails route to
-   * /games/new(.:format)
+   * (/:locale)/games/new(.:format)
    * @param {object | undefined} options
    * @returns {string} route path
    */
-  new_game_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"games"],[2,[7,"/"],[2,[6,"new"],[1,[2,[8,"."],[3,"format"]]]]]]]),
+  new_game_path: __jsr.r({"locale":{},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"games"],[2,[7,"/"],[2,[6,"new"],[1,[2,[8,"."],[3,"format"]]]]]]]]),
 
   /**
    * Generates rails route to
@@ -611,11 +611,11 @@
 
   /**
    * Generates rails route to
-   * /users/new(.:format)
+   * (/:locale)/users/new(.:format)
    * @param {object | undefined} options
    * @returns {string} route path
    */
-  new_user_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[6,"new"],[1,[2,[8,"."],[3,"format"]]]]]]]),
+  new_user_path: __jsr.r({"locale":{},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[6,"new"],[1,[2,[8,"."],[3,"format"]]]]]]]]),
 
   /**
    * Generates rails route to
@@ -867,12 +867,12 @@
 
   /**
    * Generates rails route to
-   * /users/:id(.:format)
+   * (/:locale)/users/:id(.:format)
    * @param {any} id
    * @param {object | undefined} options
    * @returns {string} route path
    */
-  user_path: __jsr.r({"id":{"r":true},"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[3,"id"],[1,[2,[8,"."],[3,"format"]]]]]]]),
+  user_path: __jsr.r({"locale":{},"id":{"r":true},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[3,"id"],[1,[2,[8,"."],[3,"format"]]]]]]]]),
 
   /**
    * Generates rails route to
@@ -932,27 +932,11 @@
 
   /**
    * Generates rails route to
-   * /users/auth/yandex(.:format)
+   * (/:locale)/users(.:format)
    * @param {object | undefined} options
    * @returns {string} route path
    */
-  user_yandex_omniauth_authorize_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[6,"auth"],[2,[7,"/"],[2,[6,"yandex"],[1,[2,[8,"."],[3,"format"]]]]]]]]]),
-
-  /**
-   * Generates rails route to
-   * /users/auth/yandex/callback(.:format)
-   * @param {object | undefined} options
-   * @returns {string} route path
-   */
-  user_yandex_omniauth_callback_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[6,"auth"],[2,[7,"/"],[2,[6,"yandex"],[2,[7,"/"],[2,[6,"callback"],[1,[2,[8,"."],[3,"format"]]]]]]]]]]]),
-
-  /**
-   * Generates rails route to
-   * /users(.:format)
-   * @param {object | undefined} options
-   * @returns {string} route path
-   */
-  users_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"users"],[1,[2,[8,"."],[3,"format"]]]]])}
+  users_path: __jsr.r({"locale":{},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"users"],[1,[2,[8,"."],[3,"format"]]]]]])}
 ,
     };
     Utils.define_module("CJS", result);

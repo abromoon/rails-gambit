@@ -1,0 +1,7 @@
+en:
+  buttons:
+    log_in: Login
+    sign_up: Sign Up
+    logout: Logout
+    reset_password: Reset password
+    create: Create

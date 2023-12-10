@@ -1,0 +1,8 @@
+ru:
+  users:
+    index:
+      logout: Выйти
+      sign_up: Зарегестрироваться
+      login: Войти
+    players:
+      continue: Продолжить игру № %{game_id}

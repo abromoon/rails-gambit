@@ -1,0 +1,11 @@
+en:
+  activerecord:
+    models:
+      user: Player
+    attributes:
+      user:
+        email: Email
+        password: Password
+        password_confirmation: Password confirmation
+        full_name: Full name
+        remember_me: Remember me

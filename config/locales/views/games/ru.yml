@@ -1,0 +1,23 @@
+ru:
+  games:
+    index:
+      title: Ваши игры
+      show: Показать игру
+      new: Новая игра
+    show:
+      edit: Редактировать игру
+      back: К списку игр
+      destroy: Удалить игру
+    challenge_button:
+      play: Играть
+    pgn:
+      title: Нотация Форсайта — Эдвардса
+    board:
+      state: Ход
+    new:
+      title: Новая игра
+      back: К списку игр
+    edit:
+      title: Редактирование игры
+      show: Показать игру
+      back: К списку игр
