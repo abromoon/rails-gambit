@@ -1,9 +1,10 @@
 class HomeController < ApplicationController
+
   def index
     @answer = ['А их нет', 'Скоро будут'].sample
   end
 
-  def about
+  def about; end
 
-  end
 end
+

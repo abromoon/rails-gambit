@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Users::SessionsController < Devise::SessionsController
+
   # before_action :configure_sign_in_params, only: [:create]
 
   def after_sign_out_path_for(_resource_or_scope)
@@ -32,4 +33,6 @@ class Users::SessionsController < Devise::SessionsController
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
+
 end
+

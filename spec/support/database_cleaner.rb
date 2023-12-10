@@ -33,6 +33,5 @@ RSpec.configure do |config|
   config.after(:all, persist: true) do
     DatabaseCleaner.clean_with(:truncation)
   end
-
 end
 
