@@ -1,0 +1,15 @@
+- if message.author == @user
+  small.text-secondary.text-end
+    = message.author.email
+  div.d-flex.flex-row.justify-content-end.mb-4
+    div.p-3 style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);"
+      p.small.mb-0 id="#{dom_id message}"
+        = message.content
+
+- else
+  small.text-secondary.text-start
+    = message.author.email
+  div.d-flex.flex-row.justify-content-start.mb-4
+    div.p-3 style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);"
+      p.small.mb-0 id="#{dom_id message}"
+        = message.content

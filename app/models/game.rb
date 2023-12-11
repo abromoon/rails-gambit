@@ -2,6 +2,7 @@ class Game < ApplicationRecord
 
   has_many :playables, dependent: :destroy
   has_many :sers, through: :playables
+  has_many :messages, dependent: :destroy
 
   enum state: { in_progress: 0, checkmate: 1, draw: 2 }
   enum turns: { white: 0, black: 1 }

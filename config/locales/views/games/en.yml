@@ -14,6 +14,8 @@ en:
       title: Forsyth–Edwards Notation
     board:
       state: State
+    chat:
+      title: Chat
     new:
       title: New game
       back: Back

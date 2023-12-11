@@ -9,3 +9,6 @@ application.register("chess", ChessController)
 
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
+
+import ResetFormController from "./reset_form_controller.js"
+application.register("reset_form", ResetFormController)

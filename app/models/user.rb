@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :playables, dependent: :destroy
   has_many :games, through: :playables
+  has_many :messages, dependent: :destroy, inverse_of: :author
 
   def game_in_progress_with(other_user)
     games.where(id: other_user.games).where(state: :in_progress)
