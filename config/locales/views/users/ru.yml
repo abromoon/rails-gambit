@@ -4,5 +4,13 @@ ru:
       logout: Выйти
       sign_up: Зарегестрироваться
       login: Войти
+      profile: Профиль
     players:
       continue: Продолжить игру № %{game_id}
+    profile:
+      title: Профиль игрока
+      statistics: 'Статистика:'
+      games_count: Всего игр — %{total}
+      victories: 'Побед — %{count}'
+      defeats: 'Поражений — %{count}'
+      alt_avatar: Аватар

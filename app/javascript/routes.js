@@ -643,6 +643,14 @@
 
   /**
    * Generates rails route to
+   * (/:locale)/profile(.:format)
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  profile_path: __jsr.r({"locale":{},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"profile"],[1,[2,[8,"."],[3,"format"]]]]]]),
+
+  /**
+   * Generates rails route to
    * /rails/active_storage/representations/redirect/:signed_blob_id/:variation_key/*filename(.:format)
    * @param {any} signed_blob_id
    * @param {any} variation_key

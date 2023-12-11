@@ -1,0 +1,43 @@
+.my-5
+  .row.justify-content-between.mx-1
+    .col.text-start
+      h1
+        i.bi.bi-person-square.me-3
+        = t('.title')
+    .col.text-end.my-auto
+      = link_to t('buttons.edit'), profile_path, class: "btn btn-primary"
+
+  .card
+    .card-body
+      .row.align-items-between
+        .col-4.text-center
+          = image_tag image_url("https://gravatar.com/avatar/#{Digest::SHA256.hexdigest(@user.email.downcase)}?s=200"), \
+                      alt: t('.alt_avatar'), \
+                      class: 'rounded-circle img-fluid'
+
+        .col-8.mx-auto.d-flex.flex-column.justify-content-between.my-4
+          div
+            - if @user.full_name.present?
+              h2.mb-0
+                = @user.full_name
+              p
+                = @user.email
+
+            - else
+              h2
+                = @user.email
+
+          div
+            h4
+              = t('.statistics')
+            .text-center
+              .row.justify-content-around
+                .col
+                  i.bi.bi-joystick.me-2
+                  = t('.games_count', total: @games.size)
+                .col
+                  i.bi.bi-trophy.me-2
+                  = t('.victories', count: @games.size)
+                .col
+                  i.bi.bi-emoji-dizzy.me-2
+                  = t('.defeats', count: @games.size)
