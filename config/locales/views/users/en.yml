@@ -4,5 +4,13 @@ en:
       logout: Logout
       sign_up: Sign Up
       login: Login
+      profile: Profile
     players:
       continue: "Continue # %{game_id} game"
+    profile:
+      title: Profile
+      statistics: 'Statistics:'
+      games_count: Games total — %{total}
+      victories: 'Victories — %{count}'
+      defeats: 'Defeats — %{count}'
+      alt_avatar: Avatar
