@@ -64,12 +64,7 @@ bundle install
 yarn install
 ```
 
-1. Затем необходимо настроить файлы `database.yml` и `cable.yml`:
-
-```shell
-cp config/database.yml.example config/database.yml
-cp config/cable.yml.example config/cable.yml
-```
+1. Настраиваем доступ к БД через переменные окружения в файлах `database.yml` и `cable.yml`.
 
 1. Теперь необходимо создать базу данных, мигрировать схему веб-приложения и заполнить БД тестовыми данными:
 
@@ -82,7 +77,7 @@ rails db:seed
 1. Запустить приложение:
 
 ```shell
-rails s
+bin/dev
 ```
 
 ## Проблемы при запуске (Troubleshooting)
