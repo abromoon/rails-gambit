@@ -536,6 +536,16 @@
 
   /**
    * Generates rails route to
+   * (/:locale)/games/:game_id/messages/:id/edit(.:format)
+   * @param {any} game_id
+   * @param {any} id
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  edit_game_message_path: __jsr.r({"locale":{},"game_id":{"r":true},"id":{"r":true},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"games"],[2,[7,"/"],[2,[3,"game_id"],[2,[7,"/"],[2,[6,"messages"],[2,[7,"/"],[2,[3,"id"],[2,[7,"/"],[2,[6,"edit"],[1,[2,[8,"."],[3,"format"]]]]]]]]]]]]]]),
+
+  /**
+   * Generates rails route to
    * /rails/conductor/action_mailbox/inbound_emails/:id/edit(.:format)
    * @param {any} id
    * @param {object | undefined} options
@@ -579,6 +589,25 @@
 
   /**
    * Generates rails route to
+   * (/:locale)/games/:game_id/messages/:id(.:format)
+   * @param {any} game_id
+   * @param {any} id
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  game_message_path: __jsr.r({"locale":{},"game_id":{"r":true},"id":{"r":true},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"games"],[2,[7,"/"],[2,[3,"game_id"],[2,[7,"/"],[2,[6,"messages"],[2,[7,"/"],[2,[3,"id"],[1,[2,[8,"."],[3,"format"]]]]]]]]]]]]),
+
+  /**
+   * Generates rails route to
+   * (/:locale)/games/:game_id/messages(.:format)
+   * @param {any} game_id
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  game_messages_path: __jsr.r({"locale":{},"game_id":{"r":true},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"games"],[2,[7,"/"],[2,[3,"game_id"],[2,[7,"/"],[2,[6,"messages"],[1,[2,[8,"."],[3,"format"]]]]]]]]]]),
+
+  /**
+   * Generates rails route to
    * (/:locale)/games(.:format)
    * @param {object | undefined} options
    * @returns {string} route path
@@ -592,6 +621,15 @@
    * @returns {string} route path
    */
   new_game_path: __jsr.r({"locale":{},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"games"],[2,[7,"/"],[2,[6,"new"],[1,[2,[8,"."],[3,"format"]]]]]]]]),
+
+  /**
+   * Generates rails route to
+   * (/:locale)/games/:game_id/messages/new(.:format)
+   * @param {any} game_id
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  new_game_message_path: __jsr.r({"locale":{},"game_id":{"r":true},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"games"],[2,[7,"/"],[2,[3,"game_id"],[2,[7,"/"],[2,[6,"messages"],[2,[7,"/"],[2,[6,"new"],[1,[2,[8,"."],[3,"format"]]]]]]]]]]]]),
 
   /**
    * Generates rails route to

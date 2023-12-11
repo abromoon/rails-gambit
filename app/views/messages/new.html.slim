@@ -1,0 +1,5 @@
+= turbo_frame_tag "new_message", target: "_top" do
+  = form_with model: [ @message.game, @message], data: { controller: 'reset_form', action: 'turbo:submit-end->reset_form#reset'} do |f|
+    .form-outline
+      = f.text_area :content, placeholder: t('.message_placeholder'), class: 'form-control', style: 'resize: none'
+      = f.submit t('buttons.send'), class: 'btn btn-primary w-100 mt-1'

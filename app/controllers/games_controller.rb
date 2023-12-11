@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
 
   before_action :set_game, only: %i[show edit update destroy]
+  before_action :set_user, only: %i[show]
   before_action :authenticate_user!
 
   include ColorConcerns
@@ -70,6 +71,10 @@ class GamesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_game
       @game = Game.find(params[:id])
+    end
+
+    def set_user
+      @user = current_user
     end
 
     # Only allow a list of trusted parameters through.

@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
     resources :users
-    resources :games
+    resources :games do
+      resources :messages
+    end
 
     get '/profile', to: 'users#profile'
     get '/about', to: 'home#about'
