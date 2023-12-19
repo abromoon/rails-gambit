@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :games, through: :playables
   has_many :messages, dependent: :destroy, inverse_of: :author
 
+  enum :role, { player: 0, admin: 1 }
+
   def game_in_progress_with(other_user)
     games.where(id: other_user.games).where(state: :in_progress)
   end

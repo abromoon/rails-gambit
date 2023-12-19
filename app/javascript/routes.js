@@ -511,6 +511,23 @@
 
   /**
    * Generates rails route to
+   * (/:locale)/admin/users/:id(.:format)
+   * @param {any} id
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  admin_user_path: __jsr.r({"locale":{},"id":{"r":true},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"admin"],[2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[3,"id"],[1,[2,[8,"."],[3,"format"]]]]]]]]]]),
+
+  /**
+   * Generates rails route to
+   * (/:locale)/admin/users(.:format)
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  admin_users_path: __jsr.r({"locale":{},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"admin"],[2,[7,"/"],[2,[6,"users"],[1,[2,[8,"."],[3,"format"]]]]]]]]),
+
+  /**
+   * Generates rails route to
    * /users/cancel(.:format)
    * @param {object | undefined} options
    * @returns {string} route path
@@ -524,6 +541,15 @@
    * @returns {string} route path
    */
   destroy_user_session_path: __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[6,"sign_out"],[1,[2,[8,"."],[3,"format"]]]]]]]),
+
+  /**
+   * Generates rails route to
+   * (/:locale)/admin/users/:id/edit(.:format)
+   * @param {any} id
+   * @param {object | undefined} options
+   * @returns {string} route path
+   */
+  edit_admin_user_path: __jsr.r({"locale":{},"id":{"r":true},"format":{}}, [2,[1,[2,[7,"/"],[3,"locale"]]],[2,[7,"/"],[2,[6,"admin"],[2,[7,"/"],[2,[6,"users"],[2,[7,"/"],[2,[3,"id"],[2,[7,"/"],[2,[6,"edit"],[1,[2,[8,"."],[3,"format"]]]]]]]]]]]]),
 
   /**
    * Generates rails route to

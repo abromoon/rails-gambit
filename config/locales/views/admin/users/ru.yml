@@ -1,0 +1,8 @@
+ru:
+  admin:
+    users:
+      index:
+        title: Список игроков
+        full_name: Полное имя
+        email: Почта
+        games_count: Количество игр
