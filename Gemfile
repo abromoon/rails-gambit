@@ -108,3 +108,5 @@ gem 'omniauth-rails_csrf_protection', '~> 1.0'
 gem 'omniauth-vkontakte'
 gem 'simple_form'
 
+gem 'cancancan'
+
