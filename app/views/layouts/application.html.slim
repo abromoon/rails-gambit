@@ -13,5 +13,7 @@ html
     = javascript_include_tag 'application', 'data-turbo-track': 'reload'
 
   body.p-0.bg-light
-    .container 
+    = render 'layouts/header'
+    
+    main.container
       = yield 

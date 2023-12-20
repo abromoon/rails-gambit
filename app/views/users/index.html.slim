@@ -1,20 +1,7 @@
-.d-flex.align-items-center.mb-4.mt-4
-  img.logo-rnds[src="https://avatars.githubusercontent.com/u/14114445?s=200&v=4" 
-                alt="Logo" 
-                width="64px"]
-  h1.m-4
-    | Rails Gambit
-
 - if user_signed_in?
-  h3
-    = current_user.email
-  .d-flex
-    = button_to t('.profile'), profile_path, method: :get, class: 'btn btn-primary me-2'
-    = button_to t('buttons.logout'), destroy_user_session_path, method: :delete, class: "btn btn-danger"
 
+  h1
+    = t('.title')
+
+  .mt-5
   = render partial: "players"
-
-- else
-  = link_to t('buttons.log_in'), new_user_session_path, class: "btn btn-primary me-2"
-  = link_to t('buttons.sign_up'), new_user_registration_path, class: "btn btn-success"
-
