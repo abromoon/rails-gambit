@@ -20,3 +20,4 @@ ru:
         have_account: "Уже зарегистрированы? "
         dont_have_account: "Ещё нет аккаунта? "
         forgot_password: "Забыли пароль? "
+        omniauthable: "Или авторизуйтесь через: "
