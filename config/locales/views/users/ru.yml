@@ -1,6 +1,7 @@
 ru:
   users:
     index:
+      title: Главная
       logout: Выйти
       sign_up: Зарегестрироваться
       login: Войти
@@ -8,7 +9,7 @@ ru:
     players:
       continue: Продолжить игру № %{game_id}
     profile:
-      title: Профиль игрока
+      title: Ваш профиль
       statistics: 'Статистика:'
       games_count: Всего игр — %{total}
       victories: 'Побед — %{count}'
