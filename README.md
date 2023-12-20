@@ -130,6 +130,12 @@ COVERAGE:  11.54% -- 3/26 lines in 8 files
 
 В [CONTRIBUTING.md][] собраны правила и рекомендации для разработчиков. Ждём и тебя тоже!
 
+<div align="center">
+
+[<img src="./RNDSOFTSFU.png" alt="rndsoftsfu" height="130px"/>](https://github.com/RND-SOFT/)
+
+</div>
+
 [INFRASTRUCTURE.md]: INFRASTRUCTURE.md
 
 [Getting Started with Rails]: https://guides.rubyonrails.org/getting_started.html
