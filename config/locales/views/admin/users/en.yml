@@ -6,4 +6,9 @@ en:
         full_name: Full name
         email: Email
         games_count: Games count
-
+      show:
+        title: Player's profile
+        games_index: Game's list
+        games_count: Games count
+      edit:
+        title: Edit player

@@ -5,6 +5,17 @@ ru:
     logout: Выйти
     reset_password: Восстановить
     create: Создать
+    update: Обновить
     edit: Редактировать
     send: Отправить
+  modals:
+    content: Вы уверены?
+  roles:
+    admin: Администратор
+    player: Игрок
+  notifications:
+    user:
+      updated: Пользователь обновлен
+      created: Пользователь создан
+      deleted: Пользователь удален
 

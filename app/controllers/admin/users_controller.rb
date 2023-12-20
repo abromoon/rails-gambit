@@ -11,16 +11,28 @@ class Admin::UsersController < ApplicationController
 
   def edit; end
 
-  def update; end
+  def update
+    if @player.update(player_params)
+      redirect_to admin_user_path(@player), notice: t('notifications.user.updated')
+    else
+      render :edit
+    end
+  end
 
   def destroy
     @player.destroy
+
+    redirect_to admin_users_path, notice: t('notifications.user.deleted')
   end
 
   private
 
     def set_player
       @player = User.find(params[:id])
+    end
+
+    def player_params
+      params.require(:user).permit(:full_name, :email, :password, :password_confirmation, :role)
     end
 
 end
