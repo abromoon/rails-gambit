@@ -23,9 +23,16 @@
   br
   
 - if devise_mapping.omniauthable?
-  - resource_class.omniauth_providers.each do |provider|
-    = form_for "Login", url: omniauth_authorize_path(resource_name, provider),
-                        method: :post,
-                        data: {turbo: "false"} do |f|
+  p
+    = t('.omniauthable')
 
-      = f.submit "Login", type: "image", src: url_for("/assets/google_btn/btn_google_signin_light_normal_web.png")
+  div.d-flex.flex-row.justify-content-around.align-items-center
+    - resource_class.omniauth_providers.each do |provider|
+      = form_for "Login", url: omniauth_authorize_path(resource_name, provider),
+                          method: :post,
+                          class: 'mb-0',
+                          data: {turbo: "false"} do |f|
+
+        / Icons by https://icons8.com
+        = f.submit "Login", type: "image", src: url_for("/assets/icons8-#{provider}.svg"), style: 'width: 80px'
+
