@@ -1,7 +1,12 @@
-h1
-  = t(".title")
+.row.justify-content-between.mx-1
+  .col.text-start
+    h1
+      = t('.title')
+  .col.text-end.my-auto
+    = link_to t('buttons.edit'), edit_admin_user_path(@player.id), class: "btn btn-primary me-2"
+    = link_to t('buttons.index'), admin_users_path, class: "btn btn-secondary"
 
-.card.mt-5
+.card
   .card-body
     h3
       = @player.email
@@ -10,8 +15,13 @@ h1
     - if @player.full_name.present?
       
       = t('full_name', scope: scope)
-      |  
+      | : 
       = @player.full_name
+
+    p
+      = t('role', scope: scope)
+      | : 
+      = t("roles.#{@player.role}")
 
     p
       = t('.games_count')

@@ -8,6 +8,7 @@ ru:
     update: Обновить
     edit: Редактировать
     send: Отправить
+    index: К списку
   modals:
     content: Вы уверены?
   roles:

@@ -8,6 +8,7 @@ en:
     update: Update
     edit: Edit
     send: Send
+    index: Back to list
   modals:
     content: Are you sure?
   roles:
