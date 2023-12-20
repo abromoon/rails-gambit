@@ -7,7 +7,9 @@ ru:
     create: Создать
     update: Обновить
     edit: Редактировать
+    delete: Удалить
     send: Отправить
+    back: Назад
     index: К списку
   modals:
     content: Вы уверены?

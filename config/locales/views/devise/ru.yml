@@ -4,6 +4,11 @@ ru:
       new:
         title: Регистрация
         password_hint: Минимум %{minimum_password_length} символов
+      edit:
+        title: Редактирование пользователя
+        password_hint: оставьте это поле пустым, если не хотите менять пароль
+        current_password_hint: нам нужен ваш текущий пароль, чтобы подтвердить изменения
+        cancel_account: Удаление аккаунта
     sessions:
       new:
         title: Вход
