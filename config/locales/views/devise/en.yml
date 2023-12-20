@@ -4,6 +4,11 @@ en:
       new:
         title: Registration
         password_hint: "%{minimum_password_length} characters minimum"
+      edit:
+        title: Edit user
+        password_hint: leave it blank if you don't want to change it
+        current_password_hint: we need your current password to confirm your changes
+        cancel_account: Cancel my account
     sessions:
       new:
         title: Login
