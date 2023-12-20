@@ -8,7 +8,7 @@ p style="color: green"
 div
   => link_to t('.edit'), edit_game_path(@game)
   '|
-  =< link_to t('.back'), games_path
+  =< link_to t('.back'), :back
 
   = button_to t('.destroy'), @game, method: :delete
 
