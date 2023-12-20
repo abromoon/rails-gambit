@@ -20,11 +20,11 @@
 - [x] Профиль игрока
 - [ ] Рейтинг игрока
 - [ ] Шахматные упражения
-- [ ] Панель администратора
+- [x] Панель администратора
 - [x] Сетевая игра вдвоём
 - [ ] Загрузка/Выгрузка PGN и FEN
 - [ ] Сохранение истории партии
-- [ ] Чат
+- [x] Чат
 - [ ] Приглашения
 - [~] Авторизация через Yandex
 - [~] Авторизация через Odnoklassniki
@@ -54,31 +54,32 @@
 - [Getting Started with Rails][] — официальный гайд от разработчиков Ruby on Rails. Пошаговое создание простенького блога со статьями и комментариями. Есть [русская версия][] от комьюнити, но там может быть устаревшая версия гайда.
 - [Ruby on Rails 6/7: уроки][] — плейлист с хорошими уроками по Ruby on Rails на русском языке.
 - [Turbo Rails Tutorial][] — гайд по Hotwire, которые используются для обновления данных на странице без её перезагрузки.
+- [Codewars][] — сайт с задачками по различным языкам программирования, в том числе и по Ruby.
 
 ## Запуск (Install)
 
 1. Устанавливаем зависимости приложения:
 
-```shell
-bundle install
-yarn install
-```
+    ```shell
+    bundle install
+    yarn install
+    ```
 
 1. Настраиваем доступ к БД через переменные окружения в файлах `database.yml` и `cable.yml`.
 
 1. Теперь необходимо создать базу данных, мигрировать схему веб-приложения и заполнить БД тестовыми данными:
 
-```shell
-rails db:create
-rails db:migrate
-rails db:seed
-```
+    ```shell
+    rails db:create
+    rails db:migrate
+    rails db:seed
+    ```
 
 1. Запустить приложение:
 
-```shell
-bin/dev
-```
+    ```shell
+    bin/dev
+    ```
 
 ## Проблемы при запуске (Troubleshooting)
 
@@ -135,6 +136,7 @@ COVERAGE:  11.54% -- 3/26 lines in 8 files
 [русская версия]: https://rusrails.ru/getting-started
 [Ruby on Rails 6/7: уроки]: https://youtube.com/playlist?list=PLWlFXymvoaJ_IY53-NQKwLCkR-KkZ_44-&feature=shared
 [Turbo Rails Tutorial]: https://www.hotrails.dev/turbo-rails
+[Codewars]: https://www.codewars.com/
 
 [RSpec]: https://rspec.info/
 [rspec-rails]: https://github.com/rspec/rspec-rails
