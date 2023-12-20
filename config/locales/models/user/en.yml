@@ -9,3 +9,5 @@ en:
         password_confirmation: Password confirmation
         full_name: Full name
         remember_me: Remember me
+        role: Role
+

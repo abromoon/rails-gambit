@@ -13,6 +13,10 @@ Rails.application.routes.draw do
 
     get '/profile', to: 'users#profile'
     get '/about', to: 'home#about'
+
+    namespace :admin do
+      resources :users, only: %i[index show edit update destroy]
+    end
   end
 
   get '/:locale', to: 'users#index'

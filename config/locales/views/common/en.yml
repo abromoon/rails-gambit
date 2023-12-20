@@ -5,5 +5,17 @@ en:
     logout: Logout
     reset_password: Reset password
     create: Create
+    update: Update
     edit: Edit
     send: Send
+    index: Back to list
+  modals:
+    content: Are you sure?
+  roles:
+    admin: Administrator
+    player: Player
+  notifications:
+    user:
+      updated: User was successfully updated
+      created: User was successfully created
+      deleted: User was successfully destroyed

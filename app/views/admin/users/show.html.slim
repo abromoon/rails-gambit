@@ -1,0 +1,65 @@
+.row.justify-content-between.mx-1
+  .col.text-start
+    h1
+      = t('.title')
+  .col.text-end.my-auto
+    = link_to t('buttons.edit'), edit_admin_user_path(@player.id), class: "btn btn-primary me-2"
+    = link_to t('buttons.index'), admin_users_path, class: "btn btn-secondary"
+
+.card
+  .card-body
+    h3
+      = @player.email
+
+    - scope = 'activerecord.attributes.user'
+    - if @player.full_name.present?
+      
+      = t('full_name', scope: scope)
+      | : 
+      = @player.full_name
+
+    p
+      = t('role', scope: scope)
+      | : 
+      = t("roles.#{@player.role}")
+
+    p
+      = t('.games_count')
+      | : 
+      = @player.games.size
+
+    h2
+      = t('.games_index')
+
+    table.table
+      - scope = 'activerecord.attributes.game'
+      thead
+        tr
+          th scope="col" 
+            | #
+          th scope="col"
+            = t("white_player_id", scope: scope)
+          th scope="col"
+            = t("black_player_id", scope: scope)
+          th scope="col"
+            = t("created_at", scope: scope)
+          th scope="col"
+            = t("updated_at", scope: scope)
+          th
+          
+      tbody
+        - @player.games.each do |game|
+          tr
+            th scope="row"
+              = game.id
+            td
+              = link_to game.white_player_id, admin_user_path(game.white_player_id)
+            td
+              = link_to game.black_player_id, admin_user_path(game.black_player_id)
+            td
+              = time_ago_in_words(game.created_at)
+            td
+              = time_ago_in_words(game.updated_at)
+            td
+              = link_to game_path(game.id) do
+                i.bi.bi-eye-fill

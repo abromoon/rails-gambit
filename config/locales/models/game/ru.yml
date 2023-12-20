@@ -10,4 +10,6 @@ ru:
         pgn: Portable Game Notation
         white_player_id: Играет белыми
         black_player_id: Играет черными
+        created_at: Игра началась
+        updated_at: Последний ход был
 
