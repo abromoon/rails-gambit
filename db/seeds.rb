@@ -1,3 +1,8 @@
+User.create!(email: 'admin@test.ru',
+             password: 'admin1',
+             password_confirmation: 'admin1',
+             role: 1)
+
 User.create!(email: 'player1@test.ru',
              password: '11111111',
              password_confirmation: '11111111')

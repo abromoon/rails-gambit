@@ -2,3 +2,4 @@ en:
   hello: "Hello world"
   header:
     profile: Profile
+    users_index: User's list
