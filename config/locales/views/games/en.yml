@@ -1,0 +1,25 @@
+en:
+  games:
+    index:
+      title: Your games
+      show: Show game
+      new: New game
+    show:
+      edit: Edit game
+      back: Back
+      destroy: Delete game
+    challenge_button:
+      play: Play
+    pgn:
+      title: Forsyth–Edwards Notation
+    board:
+      state: State
+    chat:
+      title: Chat
+    new:
+      title: New game
+      back: Back
+    edit:
+      title: Edit game
+      show: Show game
+      back: Back

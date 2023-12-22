@@ -1,0 +1,16 @@
+= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+  = f.error_notification
+
+  h3.fw-normal.mb-3.pb-3[style="letter-spacing: 1px;"]
+    = t('.title')
+  
+  .form-inputs
+    = f.input :email,
+              required: true,
+              autofocus: true,
+              input_html: { autocomplete: "email" }
+
+  .form-actions.pt-1.mb-4
+    = f.button :submit, t('buttons.reset_password'), class: "btn btn-info btn-lg btn-block"
+    
+= render "devise/shared/links"

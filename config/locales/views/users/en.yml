@@ -1,0 +1,17 @@
+en:
+  users:
+    index:
+      title: Home
+      logout: Logout
+      sign_up: Sign Up
+      login: Login
+      profile: Profile
+    players:
+      continue: "Continue # %{game_id} game"
+    profile:
+      title: Your profile
+      statistics: 'Statistics:'
+      games_count: Games total — %{total}
+      victories: 'Victories — %{count}'
+      defeats: 'Defeats — %{count}'
+      alt_avatar: Avatar

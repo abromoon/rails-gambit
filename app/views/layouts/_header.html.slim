@@ -1,0 +1,24 @@
+header.p-3.mb-3.border-bottom.bg-white.shadow-sm
+  .container
+    .d-flex.flex-wrap.align-items-center.justify-content-center.justify-content-lg-start
+      = link_to root_path do
+        img.logo-rnds[src="https://avatars.githubusercontent.com/u/14114445?s=200&v=4" 
+                      alt="Logo" 
+                      width="48px"]
+
+      h2.ms-2.mb-0.align-self-end.col-12.col-lg-auto.me-lg-auto
+        | Rails Gambit
+
+      - if user_signed_in?
+        .d-flex.mb-0.align-self-end
+          h5.align-self-center.me-3.mb-0
+            = current_user.email
+          = link_to t('header.profile'), profile_path, { class: 'btn btn-primary me-2 mb-0' }
+          - if current_user.admin?
+            = link_to t('header.users_index'), admin_users_path, class: "btn btn-secondary me-2 mb-0"
+          = link_to t('buttons.logout'), destroy_user_session_path, method: :delete, class: "btn btn-danger mb-0"
+      
+      - else
+        .d-flex.mb-0.align-self-end
+          = link_to t('buttons.log_in'), new_user_session_path, class: "btn btn-primary me-2"
+          = link_to t('buttons.sign_up'), new_user_registration_path, class: "btn btn-success"

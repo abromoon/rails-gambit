@@ -28,3 +28,4 @@ class Users::UnlocksController < Devise::UnlocksController
   #   super(resource)
   # end
 end
+

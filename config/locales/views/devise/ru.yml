@@ -1,0 +1,23 @@
+ru:
+  devise:
+    registrations:
+      new:
+        title: Регистрация
+        password_hint: Минимум %{minimum_password_length} символов
+      edit:
+        title: Редактирование пользователя
+        password_hint: оставьте это поле пустым, если не хотите менять пароль
+        current_password_hint: нам нужен ваш текущий пароль, чтобы подтвердить изменения
+        cancel_account: Удаление аккаунта
+    sessions:
+      new:
+        title: Вход
+    passwords:
+      new:
+        title: Восстановление пароля
+    shared:
+      links:
+        have_account: "Уже зарегистрированы? "
+        dont_have_account: "Ещё нет аккаунта? "
+        forgot_password: "Забыли пароль? "
+        omniauthable: "Или авторизуйтесь через: "

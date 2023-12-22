@@ -1,0 +1,35 @@
+h1.mb-5
+  = t('.title')
+
+table.table
+  thead
+    tr
+      th scope="col" 
+        | #
+      th scope="col"
+        = t(".full_name")
+      th scope="col"
+        = t(".email")
+      th scope="col"
+        = t(".games_count")
+      th
+      th
+
+  tbody
+    - @players.each do |player|
+      tr
+        th scope="row"
+          = link_to player.id, admin_user_path(player.id)
+        td
+          = player.full_name || '-'
+        td
+          = link_to player.email, admin_user_path(player.id)
+        td
+          = player.games.size
+        td
+          = link_to edit_admin_user_path(player.id) do
+            i.bi.bi-pencil-fill
+        td
+          = link_to admin_user_path(player.id), data: { turbo_method: :delete, turbo_confirm: t('modals.content') }
+            i.bi.bi-trash-fill
+

@@ -1,4 +1,4 @@
-web: bundle exec puma -t 1:5 -w 2 -p ${PORT}
+web: env RUBY_DEBUG_OPEN=true bin/rails server
 js: yarn build --watch
 css: yarn watch:css
-routes: yarn watch:jsroutes
+routes: bundle exec yarn watch:jsroutes

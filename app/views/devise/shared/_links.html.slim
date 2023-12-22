@@ -1,0 +1,38 @@
+- if controller_name != 'sessions'
+  p
+    = t('.have_account')
+    = link_to t('buttons.log_in'), new_session_path(resource_name), class: "link-info"
+    br
+
+- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
+  = link_to t('.forgot_password'), new_password_path(resource_name), class: "text-muted custom-link "
+  br
+
+- if devise_mapping.registerable? && controller_name != 'registrations'
+  p
+    = t('.dont_have_account')
+    = link_to t("buttons.sign_up"), new_registration_path(resource_name), class: "link-info"
+    br
+
+- if devise_mapping.confirmable? && controller_name != 'confirmations'
+  = link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name)
+  br
+
+- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks'
+  = link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name)
+  br
+  
+- if devise_mapping.omniauthable?
+  p
+    = t('.omniauthable')
+
+  div.d-flex.flex-row.justify-content-around.align-items-center
+    - resource_class.omniauth_providers.each do |provider|
+      = form_for "Login", url: omniauth_authorize_path(resource_name, provider),
+                          method: :post,
+                          class: 'mb-0',
+                          data: {turbo: "false"} do |f|
+
+        / Icons by https://icons8.com
+        = f.submit "Login", type: "image", src: url_for("/assets/icons8-#{provider}.svg"), style: 'width: 80px'
+

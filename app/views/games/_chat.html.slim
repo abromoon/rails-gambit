@@ -1,0 +1,12 @@
+.container
+  .row.d-flex.justify-content-center
+    .card.p-0 style="border-radius: 15px;"
+      .card-header.d-flex.justify-content-center.align-items-center.p-3.bg-secondary.text-white.border-bottom-0[style="border-top-left-radius: 15px; border-top-right-radius: 15px;"]
+        p.mb-0.fw-bold
+          = t('.title')
+
+      .card-body.py-0
+        #messages.overflow-auto.hide-scrollbar[style="height: 450px"]
+          = render @game.messages
+
+        = turbo_frame_tag "new_message", src: new_game_message_path(@game), target: "_top"

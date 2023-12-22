@@ -1,0 +1,24 @@
+ru:
+  buttons:
+    log_in: Войти
+    sign_up: Зарегистрироваться
+    logout: Выйти
+    reset_password: Восстановить
+    create: Создать
+    update: Обновить
+    edit: Редактировать
+    delete: Удалить
+    send: Отправить
+    back: Назад
+    index: К списку
+  modals:
+    content: Вы уверены?
+  roles:
+    admin: Администратор
+    player: Игрок
+  notifications:
+    user:
+      updated: Пользователь обновлен
+      created: Пользователь создан
+      deleted: Пользователь удален
+

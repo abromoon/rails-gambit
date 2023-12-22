@@ -1,0 +1,15 @@
+en:
+  activerecord:
+    models:
+      game: Game
+    attributes:
+      game:
+        state: State
+        turn: Turn
+        fen: Forsyth–Edwards Notation
+        pgn: Portable Game Notation
+        white_player_id: White Player
+        black_player_id: Black Player
+        created_at: Game started at
+        updated_at: Last move was at
+

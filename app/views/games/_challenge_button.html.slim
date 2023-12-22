@@ -1,0 +1,15 @@
+.container
+  = form_with model: Game.new, url: games_path, method: :post do |form|
+    .row.form-group.mb-5
+      = form.hidden_field :challenger_id, value: current_user.id
+      = form.hidden_field :challengee_id, value: user.id
+
+      .col-4.p-0
+        span.input-group-text.w-100
+          = user.email
+
+      .col-4.p-0
+        = form.select :color, options_for_select([['White', 'white'], ['Black', 'black'], ['Random', 'random']]), {}, { class: "form-select w-100" }
+
+      .col-4.p-0
+        = form.submit t(".play"), class: "btn btn-primary w-100"

@@ -1,23 +1,27 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-    omniauth_callbacks: 'users/omniauth_callbacks'
-  }
 
+  devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    registrations: 'users/registrations'
+  }
+  
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+
+    resources :users
+    resources :games do
+      resources :messages
+    end
+
+    get '/profile', to: 'users#profile'
+    get '/about', to: 'home#about'
+
+    namespace :admin do
+      resources :users, only: %i[index show edit update destroy]
+    end
+  end
+
+  get '/:locale', to: 'users#index'
   root 'users#index'
 
-  resources :users
-
-  resources :games
-
-
-
-
-
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-  # root "home#index"
-  get '/about', to: 'home#about'
 end
 

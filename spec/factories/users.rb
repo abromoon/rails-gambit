@@ -4,6 +4,7 @@ FactoryBot.define do
       "email#{n}@example.com"
     end
 
-    password { '123123123' }    
+    password { '123123123' }
   end
 end
+

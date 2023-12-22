@@ -4,3 +4,4 @@ class Playable < ApplicationRecord
   belongs_to :game
 
 end
+

@@ -1,81 +1,105 @@
 # Рельсовый Гамбит (Rails Gambit)
 
-<div align="center">
-
 [![pipeline status](https://gitlab.com/r4060/rails-gambit/badges/main/pipeline.svg)](https://gitlab.com/r4060/rails-gambit/)
 [![coverage report](https://gitlab.com/r4060/rails-gambit/badges/main/coverage.svg)](https://gitlab.com/r4060/rails-gambit/)
 [![license](https://badgen.net/gitlab/license/r4060/rails-gambit?color=98c510)](https://gitlab.com/r4060/rails-gambit/blob/main/LICENSE)
 [![open-issues](https://badgen.net/gitlab/open-issues/r4060/rails-gambit?icon=gitlab)](https://gitlab.com/r4060/rails-gambit/-/issues)
 [![contributors](https://badgen.net/gitlab/contributors/r4060/rails-gambit?icon=user)](https://gitlab.com/r4060/rails-gambit/)
- 
 [![telegram](https://img.shields.io/static/v1?label=telegram&message=news&color=blue&logo=telegram)](https://t.me/railsgambit)
 [![wiki](https://img.shields.io/static/v1?label=wiki&message=docs&color=white&logo=wikipedia)](https://gitlab.com/r4060/rails-gambit/-/wikis/home)
 
-</div>
+`Rails Gambit` — это образовательный проект по реализации онлайн платформы для совместной игры в шахматы и не только. Он создан с целью изучения `Ruby on Rails` студентами. Упор делается на применение передовых подходов в современной веб-разработке, погружение в процесс "на всю глубину" включая обслуживание серверов, доставку продуктового кода и популяризацию шахмат.
 
-`Rails Gambit` - это образовательный проект по реализации онлайн платформы для совместной игры в шахматы и не только. Он создан с целью изучения `Ruby on Rails` студентами. Упор делается на применение передовых подходов в современной web-разработке, погружение в процесс "на всю глубину" включая обслуживание серверов, доставку продуктового кода и популяризацию [шахмат](https://ru.wikipedia.org/wiki/Шахматы).
+---
 
-## Планы, возможности, фичи (features)
+[[_TOC_]]
 
-- [ ] Пользователи / авторизация / профиль
-- [ ] Сетевая игра в двоём
-- [ ] Импорт / экспорт PGN и FEN
+## Планы, возможности, фичи (To Do)
+
+- [x] Регистрация/Авторизация
+- [x] Профиль игрока
+- [ ] Рейтинг игрока
+- [ ] Шахматные упражения
+- [x] Панель администратора
+- [x] Сетевая игра вдвоём
+- [ ] Загрузка/Выгрузка PGN и FEN
 - [ ] Сохранение истории партии
-- [ ] Чат
+- [x] Чат
 - [ ] Приглашения
-- [ ] Авторизация через соцсети Yandex, Ok, Vk, Google
-- [ ] Телеграм бот для игры с телефона
+- [~] Авторизация через Yandex
+- [~] Авторизация через Odnoklassniki
+- [x] Авторизация через VKontakte
+- [x] Авторизация через Google
+- [~] Бот в Telegram для игры с телефона
 
-## Инфраструтктура разработки и эксплуатации
+## Инфраструктура разработки и эксплуатации (Infrastructure)
 
-См. [infrastructure.md](INFRASTRUCTURE.md).
+Подробнее в [INFRASTRUCTURE.md][].
+
+## Зависимости (Requirements)
+
+- `Ruby`
+- `Node.js`
+- `Yarn`
+- `Bundler`
+- `PostgreSQL`
+- `Redis`
+- `Docker`
+- `VS Code` или `RubyMine`
+
+## С чего начать? (Beginners Guide)
+
+Если вы мало знакомы с языком `Ruby`, то можете подчерпнуть знаний из следующих источников:
+
+- [Getting Started with Rails][] — официальный гайд от разработчиков Ruby on Rails. Пошаговое создание простенького блога со статьями и комментариями. Есть [русская версия][] от комьюнити, но там может быть устаревшая версия гайда.
+- [Ruby on Rails 6/7: уроки][] — плейлист с хорошими уроками по Ruby on Rails на русском языке.
+- [Turbo Rails Tutorial][] — гайд по Hotwire, которые используются для обновления данных на странице без её перезагрузки.
+- [Codewars][] — сайт с задачками по различным языкам программирования, в том числе и по Ruby.
 
 ## Запуск (Install)
 
-Проект представляет собой классическое Rails-приложение, поэтому к нему применимы [все существующие подходы](https://guides.rubyonrails.org/getting_started.html).
+1. Устанавливаем зависимости приложения:
 
-```shell
-$ bundle install
-```
+    ```shell
+    bundle install
+    yarn install
+    ```
 
-Затем необзодимо настроить файлы `database.yml` и `cable.yml`:
+1. Настраиваем доступ к БД через переменные окружения в файлах `database.yml` и `cable.yml`.
 
-```shell
-$ cp config/database.yml.example config/database.yml
-$ vim config/database.yml
-```
+1. Теперь необходимо создать базу данных, мигрировать схему веб-приложения и заполнить БД тестовыми данными:
 
-```shell
-$ cp config/cable.yml.example config/cable.yml
-$ vim config/cable.yml
-```
+    ```shell
+    rails db:create
+    rails db:migrate
+    rails db:seed
+    ```
 
-Теперь необходимо создать и/или мигрировать базу данных:
+1. Запустить приложение:
 
-```shell
-$ rake db:create
-$ rake db:migrate
-$ rake db:seed
-$ rails s -b 0.0.0.0
-```
+    ```shell
+    bin/dev
+    ```
 
-### docker-compose
+## Проблемы при запуске (Troubleshooting)
 
 ## Тестирование (Running Tests)
 
-В качестве фреймворка тестирования используется [RSpec](https://rspec.info/) и в частности [RSpec-Rails](https://github.com/rspec/rspec-rails). Для запуска юнит-тестов достаточно выполнить команду:
+В качестве фреймворка тестирования используется [RSpec][], в частности [rspec-rails][]. Для запуска тестов достаточно выполнить команду:
 
 ```shell
-$ rspec
+rspec
 ```
 
-### Результыта теcтирования
+### Результаты теcтирования (Tests Results)
 
-Результаты тестирование в формате `JUnit` появятся в файле `junits/rspec.xml`
+Результаты тестирования в формате `JUnit` появятся в файле `junits/rspec.xml`.
 
-### Покрытие Кода (Code Coverage)
+### Покрытие кода (Code Coverage)
 
-Для рассчёта [покрытия код](https://ru.wikipedia.org/wiki/Покрытие_кода) используется библиотека [simplecov](https://github.com/simplecov-ruby/simplecov) и его результаты выводятся в двух форматах: в виде статического html-сайта в папке `coverage/tests/index.html` и в текущем терминале в текстовом виде:
+Для рассчёта [покрытия кода][] используется библиотека [SimpleCov][]. Результаты выводятся в двух форматах: в виде статического HTML сайта в папке `coverage/tests/index.html` и в терминале.
+
+Пример вывода в терминал:
 
 ```shell
 Run options: exclude {:capybara=>true}
@@ -102,12 +126,27 @@ COVERAGE:  11.54% -- 3/26 lines in 8 files
 2 file(s) with 100% coverage not shown
 ```
 
-## Присоединиться к разработке
+## Присоединиться к разработке (Contributing)
 
-В [contributing.md](CONTRIBUTING.md) собраны правила и рекомендации для текущих и новых разработчиков. Ждём и тебя тоже!.
+В [CONTRIBUTING.md][] собраны правила и рекомендации для разработчиков. Ждём и тебя тоже!
 
 <div align="center">
 
 [<img src="./RNDSOFTSFU.png" alt="rndsoftsfu" height="130px"/>](https://github.com/RND-SOFT/)
 
 </div>
+
+[INFRASTRUCTURE.md]: INFRASTRUCTURE.md
+
+[Getting Started with Rails]: https://guides.rubyonrails.org/getting_started.html
+[русская версия]: https://rusrails.ru/getting-started
+[Ruby on Rails 6/7: уроки]: https://youtube.com/playlist?list=PLWlFXymvoaJ_IY53-NQKwLCkR-KkZ_44-&feature=shared
+[Turbo Rails Tutorial]: https://www.hotrails.dev/turbo-rails
+[Codewars]: https://www.codewars.com/
+
+[RSpec]: https://rspec.info/
+[rspec-rails]: https://github.com/rspec/rspec-rails
+[покрытия кода]: https://ru.wikipedia.org/wiki/Покрытие_кода
+[SimpleCov]: https://github.com/simplecov-ruby/simplecov
+
+[CONTRIBUTING.md]: CONTRIBUTING.md

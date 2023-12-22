@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) {|repo| "https://github.com/#{repo}.git" }
 
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.7', '>= 7.0.7.2'
-
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 6.3.1'
@@ -53,10 +51,16 @@ gem 'js-routes', '~> 2.2.7'
 gem 'kaminari', '~> 1.2.2'
 
 group :development, :test do
-  gem 'byebug', platforms: %i[mri mingw x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'awesome_print', '~> 1.8'
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rubocop'
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
 end
 
 group :development do
+  gem 'ruby-lsp-rails'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 
@@ -71,7 +75,6 @@ group :test do
 
   gem 'database_cleaner'
   gem 'parallel_tests'
-  gem 'rubocop'
   # gem 'pronto'
   # gem 'pronto-goodcheck', require: false
   # gem 'pronto-rubocop', require: false
@@ -102,5 +105,8 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
+gem 'omniauth-vkontakte'
 gem 'simple_form'
+
+gem 'cancancan'
 

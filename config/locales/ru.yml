@@ -1,0 +1,5 @@
+ru:
+  hello: "Привет мир"
+  header:
+    profile: Профиль
+    users_index: Список пользователей

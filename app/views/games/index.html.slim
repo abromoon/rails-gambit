@@ -1,11 +1,13 @@
-p style="color: green" = notice
+p style="color: green" 
+  = notice
 
-h1 Games
+h1
+  = t('.title')
 
 #games
   - @games.each do |game|
-    == render game
+    = render game
     p
-      = link_to "Show this game", game
+      = link_to t('.show'), game
 
-= link_to "New game", new_game_path
+= link_to t('.new'), new_game_path

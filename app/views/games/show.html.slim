@@ -1,10 +1,14 @@
-p style="color: green" = notice
+p style="color: green" 
+  = notice
 
-== render @game
+= turbo_stream_from @game
+
+= render @game
 
 div
-  => link_to "Edit this game", edit_game_path(@game)
+  => link_to t('.edit'), edit_game_path(@game)
   '|
-  =< link_to "Back to games", games_path
+  =< link_to t('.back'), :back
 
-  = button_to "Destroy this game", @game, method: :delete
+  = button_to t('.destroy'), @game, method: :delete
+

@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:16.1-alpine3.18
+    restart: always
+
+    environment:
+      - POSTGRES_PASSWORD=qwerty123
+      - POSTGRES_USER=user
+      - POSTGRES_DB=rails_gambit_development
+    ports:
+      - 6743:5432
+    tmpfs: /tmp
+
