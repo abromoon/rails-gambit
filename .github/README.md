@@ -1,12 +1,12 @@
 # Рельсовый Гамбит (Rails Gambit)
 
-[![pipeline status](https://gitlab.com/r4060/rails-gambit/badges/main/pipeline.svg)](https://gitlab.com/r4060/rails-gambit/)
-[![coverage report](https://gitlab.com/r4060/rails-gambit/badges/main/coverage.svg)](https://gitlab.com/r4060/rails-gambit/)
-[![license](https://badgen.net/gitlab/license/r4060/rails-gambit?color=98c510)](https://gitlab.com/r4060/rails-gambit/blob/main/LICENSE)
-[![open-issues](https://badgen.net/gitlab/open-issues/r4060/rails-gambit?icon=gitlab)](https://gitlab.com/r4060/rails-gambit/-/issues)
-[![contributors](https://badgen.net/gitlab/contributors/r4060/rails-gambit?icon=user)](https://gitlab.com/r4060/rails-gambit/)
+[![pipeline status](https://gitlab.com/rails_gambit/rails-gambit/badges/main/pipeline.svg)](https://gitlab.com/rails_gambit/rails-gambit/)
+[![coverage report](https://gitlab.com/rails_gambit/rails-gambit/badges/main/coverage.svg)](https://gitlab.com/rails_gambit/rails-gambit/)
+[![license](https://badgen.net/gitlab/license/rails_gambit/rails-gambit?color=98c510)](https://gitlab.com/rails_gambit/rails-gambit/blob/main/LICENSE)
+[![open-issues](https://badgen.net/gitlab/open-issues/rails_gambit/rails-gambit?icon=gitlab)](https://gitlab.com/rails_gambit/rails-gambit/-/issues)
+[![contributors](https://badgen.net/gitlab/contributors/rails_gambit/rails-gambit?icon=user)](https://gitlab.com/rails_gambit/rails-gambit/)
 [![telegram](https://img.shields.io/static/v1?label=telegram&message=news&color=blue&logo=telegram)](https://t.me/railsgambit)
-[![wiki](https://img.shields.io/static/v1?label=wiki&message=docs&color=white&logo=wikipedia)](https://gitlab.com/r4060/rails-gambit/-/wikis/home)
+[![wiki](https://img.shields.io/static/v1?label=wiki&message=docs&color=white&logo=wikipedia)](https://gitlab.com/rails_gambit/rails-gambit/-/wikis/home)
 
 `Rails Gambit` — это образовательный проект по реализации онлайн платформы для совместной игры в шахматы и не только. Он создан с целью изучения `Ruby on Rails` студентами. Упор делается на применение передовых подходов в современной веб-разработке, погружение в процесс "на всю глубину" включая обслуживание серверов, доставку продуктового кода и популяризацию шахмат.
 
@@ -125,7 +125,7 @@ COVERAGE:  11.54% -- 3/26 lines in 8 files
 
 <div align="center">
 
-[<img src="./RNDSOFTSFU.png" alt="rndsoftsfu" height="130px"/>](https://github.com/RND-SOFT/)
+[<img src="../RNDSOFTSFU.png" alt="rndsoftsfu" height="130px"/>](https://github.com/RND-SOFT/)
 
 </div>
 

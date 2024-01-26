@@ -1,6 +1,6 @@
 variables:
   SERVICE_NAME: rails-gambit
-  SERVICE_IMAGE: registry.gitlab.com/r4060/rails-gambit
+  SERVICE_IMAGE: registry.gitlab.com/rails_gambit/rails-gambit
   SERVICE_TAG: ${CI_COMMIT_SHORT_SHA}
 
 stages:
@@ -38,8 +38,8 @@ build:image:
     paths:
       - vendor/ruby
       - vendor/apk
-      
-      
+
+
 tests:units:
   extends: .test_job
   services:
