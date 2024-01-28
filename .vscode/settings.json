@@ -1,5 +1,6 @@
 {
     "editor.tabSize": 2,
+    "sorbet.enabled": true,
     "[git-commit]": {
         "editor.rulers": [50]
     },
