@@ -26,7 +26,8 @@
     "build:css:prefix": "postcss ./app/assets/builds/application.css --use=autoprefixer --output=./app/assets/builds/application.css",
     "build:css": "yarn build:css:compile",
     "watch:css": "nodemon --watch ./app/assets/stylesheets/ --ext scss --exec \"yarn build:css\"",
-    "watch:jsroutes": "nodemon --watch ./config/routes.rb --exec \"yarn build:jsroutes\""
+    "watch:jsroutes": "nodemon --watch ./config/routes.rb --exec \"yarn build:jsroutes\"",
+    "db:up": "docker compose -f ./compose.dev.yml up -d"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
