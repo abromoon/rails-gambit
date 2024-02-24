@@ -1,0 +1,30 @@
+services:
+  webapp:
+    image: rails-gambit-rc1:latest
+    env_file:
+      - webapp-variables.env
+    command: ["scripts/server.sh"]
+    depends_on:
+      - db
+      - redis
+    ports:
+      - 3000
+    volumes:
+      - ./storage:/app/storage
+    labels:
+      - com.host.description=label
+
+  db:
+    image: postgres:16.2-alpine3.19
+    env_file:
+      - db-variables.env
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+     - 5432
+
+
+  redis:
+    image: redis:7.2.4-alpine3.19
+    ports:
+      - "6379:6379"
