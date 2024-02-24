@@ -12,7 +12,10 @@ services:
     volumes:
       - ./storage:/app/storage
     labels:
-      - com.host.description=label
+      - "traefik.enable=true"
+      - "traefik.http.routers.rails-gambit.entrypoints=websecure,web"
+      - "traefik.http.routers.rails-gambit.rule=Host(`gambit.sfedu-23.fun`)"
+      - "traefik.http.routers.rails-gambit.tls=true"
 
   db:
     image: postgres:16.2-alpine3.19
