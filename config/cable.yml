@@ -5,11 +5,11 @@ development:
 test:
   adapter: test
 
-production:
+production_:
   adapter: postgresql
   channel_prefix: rails_gambit_production
 
-production_:
+production:
   adapter: redis
   url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
   channel_prefix: rails_gambit_production

@@ -1,0 +1,45 @@
+services:
+  webapp:
+    image: lipoff/rails-gambit:latest
+    env_file:
+      - webapp-variables.env
+    command: ["scripts/server.sh"]
+    depends_on:
+      - db
+      - redis
+    ports:
+      - 3000:3000
+    volumes:
+      - ./storage:/app/storage
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.rails-gambit.entrypoints=websecure"
+      - "traefik.http.routers.rails-gambit.rule=Host(`rg.sfedu-23.fun`)"
+      - "traefik.http.services.webapp-rails-gambit.loadbalancer.server.port=3000"
+      - "traefik.http.routers.rails-gambit.tls.certresolver=myresolver"
+    networks:
+      - traefik
+
+  db:
+    image: postgres:16.2-alpine3.19
+    env_file:
+      - db-variables.env
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+     - 5432
+    networks:
+      - traefik
+
+  redis:
+    image: redis:7.2.4-alpine3.19
+    ports:
+      - "6379:6379"
+    networks:
+      - traefik
+
+
+networks:
+  traefik:
+    external: true
+  app:
