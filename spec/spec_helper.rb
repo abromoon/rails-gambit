@@ -31,6 +31,8 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
                                                                 SimpleCov::Formatter::CoberturaFormatter # for test coverage visualization
                                                               ])
 
+
+
 SimpleCov.coverage_dir("coverage/#{ENV.fetch('TEST_TYPE', 'tests')}/")
 
 SimpleCov.command_name ENV.fetch('TEST_TYPE', 'tests')
