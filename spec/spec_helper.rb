@@ -33,7 +33,8 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 
 
 
-SimpleCov.coverage_dir("coverage/#{ENV.fetch('TEST_TYPE', 'tests')}/")
+#SimpleCov.coverage_dir("coverage/#{ENV.fetch('TEST_TYPE', 'tests')}/")
+SimpleCov.coverage_dir("coverage/tests/")
 
 SimpleCov.command_name ENV.fetch('TEST_TYPE', 'tests')
 
