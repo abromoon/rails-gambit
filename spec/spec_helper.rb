@@ -23,13 +23,13 @@ require 'shoulda/matchers'
 
 require 'simplecov'
 require 'simplecov-console'
-
-SimpleCov.start
+require 'simplecov-cobertura'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
-                                                                 SimpleCov::Formatter::HTMLFormatter, # for gitlab
-                                                                 SimpleCov::Formatter::Console # for developers
-                                                               ])
+                                                                SimpleCov::Formatter::HTMLFormatter,# for gitlab
+                                                                SimpleCov::Formatter::Console, # for developers
+                                                                SimpleCov::Formatter::CoberturaFormatter # for test coverage visualization
+                                                              ])
 
 SimpleCov.coverage_dir("coverage/#{ENV.fetch('TEST_TYPE', 'tests')}/")
 

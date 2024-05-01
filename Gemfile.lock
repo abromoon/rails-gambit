@@ -360,6 +360,9 @@ GEM
       docile (~> 1.1)
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
+    simplecov-cobertura (2.1.0)
+      rexml
+      simplecov (~> 0.19)
     simplecov-console (0.9.1)
       ansi
       simplecov
@@ -469,6 +472,7 @@ DEPENDENCIES
   shoulda-matchers
   simple_form
   simplecov
+  simplecov-cobertura (~> 2.1)
   simplecov-console
   slim-rails
   sprockets-rails
