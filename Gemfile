@@ -71,6 +71,7 @@ group :development do
 end
 
 group :test do
+  gem 'simplecov', require: false
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'selenium-webdriver'
@@ -95,6 +96,7 @@ group :test do
 
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
+  gem 'simplecov-cobertura', '~> 2.1'
   gem 'webmock'
 end
 
