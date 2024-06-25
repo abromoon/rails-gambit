@@ -43,7 +43,7 @@ rspec:
     RAILS_ENV: test
     POSTGRES_HOST_AUTH_METHOD: trust
     DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL: 'true'
-
+    PGDATA: /var/lib/postgresql/data
   script:
     - ls -Al
     - apk add -U --no-cache build-base openssl tzdata vim libpq-dev postgresql16 yarn
@@ -51,7 +51,7 @@ rspec:
     - chown postgres:postgres /run/postgresql/
     - su postgres -
     - initdb
-    - pg_ctl start -D /var/lib/postgresql/data
+    - pg_ctl start
     - exit
     - bundle config set --local deployment 'true'
     - bundle install --no-cache
