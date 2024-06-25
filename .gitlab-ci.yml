@@ -47,12 +47,6 @@ rspec:
   script:
     - ls -Al
     - apk add -U --no-cache build-base openssl tzdata vim libpq-dev postgresql16 yarn
-    - mkdir /run/postgresql
-    - chown postgres:postgres /run/postgresql/
-    - su postgres -
-    - initdb
-    - pg_ctl start
-    - exit
     - bundle config set --local deployment 'true'
     - bundle install --no-cache
     - yarn install
