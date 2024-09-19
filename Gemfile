@@ -95,6 +95,7 @@ group :test do
 
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
+  gem 'simplecov-cobertura', '~> 2.1'
   gem 'webmock'
 end
 

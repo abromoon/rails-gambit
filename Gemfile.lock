@@ -184,6 +184,8 @@ GEM
     net-smtp (0.4.0)
       net-protocol
     nio4r (2.5.9)
+    nokogiri (1.15.4-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.15.4-x64-mingw-ucrt)
       racc (~> 1.4)
     nokogiri (1.15.4-x86_64-linux)
@@ -358,6 +360,9 @@ GEM
       docile (~> 1.1)
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
+    simplecov-cobertura (2.1.0)
+      rexml
+      simplecov (~> 0.19)
     simplecov-console (0.9.1)
       ansi
       simplecov
@@ -418,6 +423,7 @@ GEM
     zeitwerk (2.6.12)
 
 PLATFORMS
+  arm64-darwin-23
   x64-mingw-ucrt
   x86_64-linux
 
@@ -466,6 +472,7 @@ DEPENDENCIES
   shoulda-matchers
   simple_form
   simplecov
+  simplecov-cobertura (~> 2.1)
   simplecov-console
   slim-rails
   sprockets-rails

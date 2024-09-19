@@ -67,6 +67,9 @@ tests:units:
   coverage: '/\(\d+.\d+\%\) covered/'
   artifacts:
     reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/tests/coverage.xml
       junit: junits/rspec*.xml
     name: "coverage"
     paths:
